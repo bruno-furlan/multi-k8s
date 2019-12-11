@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
 
+import { Wave } from 'react-animated-text';
+
 class App extends Component {
   render() {
     return (
@@ -12,12 +14,18 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">8==================></h1>
-            <Link to="/">Home</Link>
-            <Link to="/otherpage">Other Page</Link>
+            <h1 className="App-title"><Wave text="8==============>" effect="fadeOut" effectChange={3.4} /></h1>
+            <p>
+            </p>
+            <p></p>
+            <Link to="/">Home </Link>
+            <Link to="/otherpage">| Other Page</Link>
+            <p></p>
           </header>
           <div>
+            <p></p><p></p>
             <Route exact path="/" component={Fib} />
+            <p></p>
             <Route path="/otherpage" component={OtherPage} />
           </div>
         </div>
